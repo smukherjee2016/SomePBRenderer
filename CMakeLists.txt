@@ -57,6 +57,7 @@ endif()
 
 add_subdirectory("extern/RayTracing_OpenGLViewer/")
 
+# Thanks to: https://floooh.github.io/2016/01/12/cmake-dependency-juggling.html
 add_executable(SomePBRenderer src/SPBRmain.cpp)
 target_include_directories(SomePBRenderer PUBLIC "extern/RayTracing_OpenGLViewer/include")
 target_link_libraries(SomePBRenderer PUBLIC RayTracing_OpenGLViewer_lib)
