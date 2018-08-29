@@ -57,8 +57,6 @@ endif()
 
 add_subdirectory("extern/RayTracing_OpenGLViewer/")
 
-
-include_directories("extern/RayTracing_OpenGLViewer/include")
-
 add_executable(SomePBRenderer src/SPBRmain.cpp)
+target_include_directories(SomePBRenderer PUBLIC "extern/RayTracing_OpenGLViewer/include")
 target_link_libraries(SomePBRenderer PUBLIC RayTracing_OpenGLViewer_lib)
